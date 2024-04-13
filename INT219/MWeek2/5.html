@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-size: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <p id="target">
+
+        </p>
+    </div>
+    <script>
+        const student = {
+            "name":"Anubhav",
+            "class":"K22AZ",
+            "course":["HTML","CSS","JS","JSON"]
+        }
+        const student2 ={
+            "name":"Anubhav",
+            "class":"K22AZ"
+        }
+        let a=""
+        for(i in student.course){
+            a+=student.course[i]+"<br>";
+        }
+        document.getElementById("target").innerHTML =a;
+         const abc = JSON.stringify(student);
+        console.log(abc)
+        const abc1 = JSON.parse(abc);
+        console.log(abc1)
+    </script>
+</body>
+</html>

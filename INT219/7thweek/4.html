@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dropdown</title>
+</head>
+<body>
+    <div class="dropdown">
+        <button class="dropbutton">Select the option</button>
+        <ul id="dropoption" class="dropoptions">
+            <li class="drop-down option">Math</li>
+            <li class="drop-down option">Phy</li>
+            <li class="drop-down option">Che</li>
+        </ul>
+    </div>
+    <script>
+        const dropbutton = document.querySelector('.dropbutton');
+        const dropoptions = document.querySelector('.dropoptions');
+
+        dropbutton.addEventListener('click', () => {
+            dropoptions.style.display = dropoptions.style.display === 'none' ? 'block' : 'none';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document-Object</title>
+</head>
+<body>
+    <div class="button">
+        <button id="myButton">Click here</button>
+    </div>
+    <script>
+        var para = document.createElement("p");
+        para.innerHTML = "jewbdjahdhewakfhewkjahfkjewnfkajwnfkjewanfkenakjqnfek";
+        document.body.appendChild(para);
+
+        
+        var button = document.getElementById("myButton");
+        button.addEventListener("click", function() {
+            para.style.display = (para.style.display === 'none' || para.style.display === '') ? 'block' : 'none';
+        });
+        
+    </script>
+</body>
+</html>

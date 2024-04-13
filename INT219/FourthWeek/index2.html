@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="start()">Start</button>
+    <button onclick="stop()">Stop</button>
+
+    <p id="time"></p>
+
+    <script>
+        let intervalId; 
+
+        function start() {
+            intervalId = setInterval(dateTime, 1000);
+        }
+
+        function dateTime() {
+            const currentTime = new Date();
+            document.getElementById("time").innerHTML = currentTime.toLocaleTimeString();
+        }
+
+        function stop() {
+            clearInterval(intervalId);
+        }
+    </script>
+
+</body>
+</html>

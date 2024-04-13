@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Example</title>
+</head>
+<body>
+    <div id="output"></div>
+    <script>
+        let person1 = {
+            name: "Anubhav",
+            age: 20,
+            city: "Uttar-pradesh"
+        };
+
+        let person2 = {
+            name: "Sambit Ghost",
+            age: 19,
+            city: "Bangali"
+        };
+
+        let outputDiv = document.getElementById('output');
+        outputDiv.innerHTML += "<h2>Person 1:</h2>";
+        outputDiv.innerHTML += "<p>Name: " + person1.name + "</p>";
+        outputDiv.innerHTML += "<p>age: " + person1.age + "</p>";
+        outputDiv.innerHTML += "<p>city: " + person1.city + "</p>";
+
+        outputDiv.innerHTML += "<h2>Person 2:</h2>";
+        outputDiv.innerHTML += "<p>Name: " + person2.name + "</p>";
+        outputDiv.innerHTML += "<p>age: " + person2.age + "</p>";
+        outputDiv.innerHTML += "<p>city: " + person2.city + "</p>";
+    </script>
+</body>
+</html>

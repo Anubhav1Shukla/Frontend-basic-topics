@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.1/jquery.min.js"></script>
+    <style>
+        .dark_mode{
+            background-color: black;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <!-- <div id="main"> -->
+    <div id="d1">
+        <p>
+            *************************
+        </p>
+    </div>
+    <div id="d2">
+        <p>
+            **********************************
+        </p>
+    </div>
+    <div id="d3">
+        <p>
+            ********************************************
+        </p>
+    </div>
+    <!-- </div> -->
+    <button id="b1">First</button>
+    <button id="b2">Second</button>
+    <button id="b3">Third</button>
+    <button id="b4">Dark mode</button>
+    <button id="b5">Remove Dark mode</button>
+    <button id="b6">Change mode</button>
+    <script>
+        $(document).ready(function(){
+            $("*").css("font-size","20px")
+            $("#b1").click(function(){
+                $("#d1 p").text("Anubhav Shukla")
+            })
+            $("#b2").click(function(){
+                $("#d2 p").html("<i>@anubhavshukla</i>")
+            })
+            $("#b3").click(function(){
+                $("#d3").html("<img src='https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTey0fy698hIgk4Mct1fhqMoglqhhuQ_KRHGdj4ci-c6g&s' />")
+            })
+            $("#b4").click(function(){
+                $("body").addClass("dark_mode")
+            })
+            $("#b5").click(function(){
+                $("body").removeClass("dark_mode")
+            })
+            $("#b6").click(function(){
+                $("body").toggleClass("dark_mode")
+            })
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="d1">
+        <p id="p1">welcome</p>
+        <ul>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+            <li>hii hello</li>
+        </ul>
+    </div>
+    <script>
+        $(document).ready(function()
+        {
+            $("#p1").css("font-size","140px");
+            $("#p1").css("color","lightgray");
+            $("#p1").css("background-color","yellow");
+            $("#d1").css("text-align","center");
+            var a=$("#d1").text();
+            alert(a);
+            $("li:odd").css("color","red");
+            $("li:even").css("color","green");
+            $("li:odd").css("border","5px solid green");
+            $("li:even").css("border","red");
+        })
+    </script>
+</body>
+</html>

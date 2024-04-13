@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Dynamo Dive</title>
+    <style>
+        body {
+            transition: background-color 0.5s;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Class-Activity</h1>
+
+    <p id="dynamicParagraph">This is a dynamic paragraph.</p>
+
+    <button onclick="toggleImageVisibility()">Toggle Image Visibility</button>
+    <img id="dynamicImage" src="https://cc-prod.scene7.com/is/image/CCProdAuthor/how_to_compress_images_with_photoshop_lightroom_P1_mobile_360x270?$pjpeg$&jpegSize=200&wid=720" alt="Dynamic Image" style="display: block;">
+
+    <button onclick="changeBackgroundColor()">Change Background Color</button>
+
+    <script>
+        document.getElementById('dynamicParagraph').textContent = 'New dynamic content!';
+        function toggleImageVisibility() {
+            var image = document.getElementById('dynamicImage');
+            image.style.display = (image.style.display === 'none' || image.style.display === '') ? 'block' : 'none';
+        }
+        function changeBackgroundColor() {
+            var body = document.body;
+            body.style.backgroundColor = getRandomColor();
+        }
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+        var newElement = document.createElement('p');
+        newElement.textContent = 'This is a new paragraph element.';
+        document.body.appendChild(newElement);
+    </script>
+
+</body>
+</html>

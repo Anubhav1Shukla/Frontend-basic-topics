@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Slider</title>
+<style>
+    .slider-container {
+        width: 500px;
+        height: 300px;
+        overflow: hidden;
+        margin: 0 auto;
+        position: relative;
+    }
+    .slider-container img {
+        width: 100%;
+        height: 100%;
+        display: block;
+    }
+</style>
+</head>
+<body>
+    <div class="slider-container" id="sliderContainer"></div>
+
+<script>
+    const imageSources = [
+        "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/Image_created_with_a_mobile_phone.png/1200px-Image_created_with_a_mobile_phone.png",
+        "https://buffer.com/cdn-cgi/image/w=1000,fit=contain,q=90,f=auto/library/content/images/size/w1200/2023/09/instagram-image-size.jpg",
+        "https://img.freepik.com/free-photo/painting-mountain-lake-with-mountain-background_188544-9126.jpg",
+        "https://dfstudio-d420.kxcdn.com/wordpress/wp-content/uploads/2019/06/digital_camera_photo-1080x675.jpg"
+    ];
+
+    const sliderContainer = document.getElementById('sliderContainer');
+
+    for (let i = 0; i < imageSources.length; i++) {
+        const img = document.createElement('img');
+        img.src = imageSources[i];
+        img.alt = 'image';
+        img.style.display = i === 0 ? 'block' : 'none';
+        sliderContainer.appendChild(img);
+    }
+
+    let currentIndex = 0;
+    const slides = document.querySelectorAll('.slider-container img');
+    const totalSlides = slides.length;
+
+    function showSlide(index) {
+        for (let i = 0; i < slides.length; i++) {
+            if (i === index) {
+                slides[i].style.display = 'block';
+            } else {
+                slides[i].style.display = 'none';
+            }
+        }
+    }
+
+    function nextSlide() {
+        currentIndex = (currentIndex + 1) % totalSlides;
+        showSlide(currentIndex);
+    }
+
+    setInterval(nextSlide, 2000);
+</script>
+</body>
+</html>

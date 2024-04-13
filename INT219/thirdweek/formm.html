@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .out{
+            background-color: rgb(89, 89, 99);
+            width: 400px;
+            height: 400px;
+        }
+    </style>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="txt1" onkeydown="generateAlert()">
+    </form>
+
+    
+    <div class="out" onmouseout="counting()">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="" height="200" width="200">
+    </div>
+
+    <hr>
+
+    <form action="">
+        <input type="text" id="txt2" onfocus="changeColor()" onblur="originalColor()">
+    </form>
+
+    <hr>
+
+    <form action="" onsubmit="return validate()">
+        <input type="text" id="name">
+        <input type="submit">
+    </form>
+    <script>
+
+        function validate()
+        {
+          if(document.getElementById("name").value == ""){
+            alert("cant be left blank")
+          }  
+          else{
+            return
+          }
+        }
+
+        let count = 0
+        function counting()
+        {
+            count++
+            console.log(count);
+        }
+
+        function generateAlert() {
+            alert("you have clickeg on image")
+        }
+
+        function changeColor() {
+            document.getElementById("txt2").style.backgroundColor = "blue"
+        }
+
+        function originalColor() {
+            document.getElementById("txt2").style.background = "none"
+        }
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

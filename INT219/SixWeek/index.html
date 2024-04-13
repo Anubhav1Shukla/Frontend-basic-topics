@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style> 
+    </style>
+</head>
+<body>
+
+    <script>
+        var div = document.createElement("div")
+        div.style.backgroundColor="aqua"
+        var heading = document.createElement("h1")
+        heading.innerText="WELCOME TO HTML"
+        document.body.appendChild(div)
+        div.appendChild(heading)
+        div.style.display="flex"
+        div.style.alignItems="center"
+        div.style.justifyContent="center"
+        div.style.height="4rem"
+        document.body.style.margin="0"
+        heading.style.margin="0"
+
+        var div1 = document.createElement("div")
+        document.body.appendChild(div1)
+        div1.style.display="flex"
+
+        var div2 = document.createElement("div")
+        div2.style.backgroundColor="grey"
+        div2.style.color="aqua"
+        var content = document.createElement("p")
+        content.innerText="The most common way to access an HTML element is to use the id of the element. In the example above, the getElementById method is used to find the element."
+        div1.appendChild(div2)
+        div2.appendChild(content)
+        div2.style.width="50%"
+
+        var div3 = document.createElement("div")
+        div3.style.backgroundColor="green"
+        var img = document.createElement("img")
+        img.src="1.jpg"
+        div1.appendChild(div3)
+        div3.appendChild(img)
+        div3.style.width="50%"
+
+        img.style.height="30%"
+        img.style.width="30%"
+
+        var button = document.createElement("button");
+        button.innerText = "Click Me";
+        button.style.backgroundColor = "blue"; 
+        button.style.transition = "background-color 0.3s ease"; 
+        button.addEventListener("mouseover", function() {
+            button.style.backgroundColor = "aqua";
+        });
+
+        button.addEventListener("mouseout", function() {
+            button.style.backgroundColor = "blue";
+        });
+
+        document.body.appendChild(button);
+
+    </script>
+    
+</body>
+</html>

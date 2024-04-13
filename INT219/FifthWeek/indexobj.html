@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object In Javascript</title>
+</head>
+<body>
+    <script>
+        let Employee={
+            name:"Anubhav",
+            Id:1272,
+            Phone:9754632321,
+            Salary:50000
+        }
+        console.log(Employee);
+        console.log(Employee.name);
+        console.log(Employee.Salary)
+        console.log(Employee.name+" Id No."+Employee.Id+" salary is " +Employee.Salary)
+        console.log(`${Employee.name} Id No. ${Employee.Id} salary is  ${Employee.Salary}`)
+        
+        let Student = {
+            name: "Lisa",
+            age: 24,
+            marks: 78.9,
+            display() {
+              console.log("Name:", this.name, "Age:", this.age, "Marks:", this.marks);
+            }
+          };
+          
+          
+          let std1 = Object.create(Student);
+          
+          std1.name = "Sambit";
+          std1.age=20;
+          std1.marks=81;
+          std1.display();
+          
+          function student(name,roll,marks){
+            this.name=name;
+            this.roll=roll;
+            this.marks=marks;
+          }
+          let student1=new student("Anubhav",13,88);
+          console.log(student1);
+          let student2=new student("Sambit",12,90);
+          console.log(student2)
+          
+
+    </script>
+</body>
+</html>

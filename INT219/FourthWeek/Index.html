@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fourth-Week</title>
+</head>
+<style>
+    div{
+        background-color: blanchedalmond;
+    }
+</style>
+<body>
+    <div id="root">
+        <img  src="https://upload.wikimedia.org/wikipedia/commons/4/47/PNG_transparency_demonstration_1.png" alt="dice-image" height="100px">
+        <form>
+            <input type="text" onblur="key()" >
+        </form>
+    </div>
+    <script>
+       function key(){
+        document.getElementById('root').style.background="green";
+        console.log("occur");
+       }
+    </script>
+</body>
+</html>

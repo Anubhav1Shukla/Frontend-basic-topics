@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Name - Portfolio</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            text-align: left;
+            padding: 20px;
+        }
+
+        nav {
+            background-color: #333;
+            padding: 10px;
+            text-align: center;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: white;
+            margin: 0 20px;
+            transition: color 0.3s, font-weight 0.3s;
+        }
+
+        nav a:hover {
+            color: #66ccff;
+            font-weight: bold;
+        }
+
+        section {
+            padding: 20px;
+        }
+
+        .profile-image {
+            max-width: 100%;
+            border-radius: 50%;
+        }
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            margin-top: 20px;
+        }
+
+        .skill {
+            text-align: center;
+            margin: 10px;
+        }
+
+        .projects {
+            margin-top: 20px;
+        }
+
+        .project {
+            margin-bottom: 20px;
+        }
+
+        .recommendations {
+            margin-top: 20px;
+        }
+
+        .recommendation {
+            margin-bottom: 20px;
+        }
+
+        .home-icon {
+            font-size: 24px;
+            cursor: pointer;
+        }
+
+        /* Add your custom styles here */
+        .confirmation-popup {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Your Name</h1>
+    </header>
+    <nav>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#recommendations">Recommendations</a>
+    </nav>
+    <section id="about">
+        <img class="profile-image" src="profile.jpg" alt="Profile Image">
+        <h2>About Me</h2>
+        <p>Your summary goes here...</p>
+    </section>
+    <section id="skills">
+        <h2>Skills</h2>
+        <div class="skills">
+            <!-- Add your skills here with logos and text -->
+            <div class="skill">Skill 1</div>
+            <div class="skill">Skill 2</div>
+            <div class="skill">Skill 3</div>
+        </div>
+    </section>
+    <section id="projects" class="projects">
+        <h2>Projects</h2>
+        <!-- Add your projects here in the specified format -->
+        <div class="project">
+            <h3>Project 1</h3>
+            <p>Description of Project 1...</p>
+        </div>
+        <div class="project">
+            <h3>Project 2</h3>
+            <p>Description of Project 2...</p>
+        </div>
+        <div class="project">
+            <h3>Project 3</h3>
+            <p>Description of Project 3...</p>
+        </div>
+    </section>
+    <section id="recommendations" class="recommendations">
+        <h2>Recommendations</h2>
+        <!-- Add your recommendations here in the specified format -->
+        <div class="recommendation">
+            <p>Recommendation 1...</p>
+        </div>
+        <div class="recommendation">
+            <p>Recommendation 2...</p>
+        </div>
+        <div class="recommendation">
+            <p>Recommendation 3...</p>
+        </div>
+    </section>
+    <footer>
+        <!-- Add your home icon here -->
+        <span class="home-icon">🏠</span>
+    </footer>
+    <div class="confirmation-popup" id="confirmationPopup">
+        <p>Recommendation submitted successfully!</p>
+        <button onclick="closeConfirmationPopup()">OK</button>
+    </div>
+    <script>
+        // Add JavaScript for the pop-up confirmation message upon submitting a recommendation
+        function showConfirmationPopup() {
+            document.getElementById("confirmationPopup").style.display = "block";
+        }
+
+        function closeConfirmationPopup() {
+            document.getElementById("confirmationPopup").style.display = "none";
+        }
+
+        // You may use event listeners and DOM manipulation for other functionality
+    </script>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sample Document</title>
+</head>
+<body>
+    <input type="text" id="inputField">
+    <button id="submitButton">Submit</button>
+    <p id="messageParagraph"></p>
+    <script>
+        function validateInput(){
+            const messageElement = document.getElementById("messageParagraph");
+            messageElement.innerHTML = "";
+            let inputValue = document.getElementById("inputField").value;
+            try{
+                if(inputValue == " ") throw "is empty";
+                if(isNaN(inputValue)) throw "is not a number";
+                if(inputValue > 18) throw "your age is more than 18";
+                if(inputValue<18) throw "your age is not more than 18"
+            }
+            catch(error){
+                messageElement.innerHTML = " " + error;
+            }
+        }
+        document.getElementById("submitButton").addEventListener("click", validateInput);
+    </script>
+</body>
+</html>

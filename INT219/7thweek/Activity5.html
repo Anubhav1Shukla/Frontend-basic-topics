@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Change Image on Click</title>
+  <style>
+    #imageContainer {
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+<div id="imageContainer">
+  <img id="myImage" src="1.webp" alt="Original Image">
+</div>
+
+<script>
+  document.getElementById("imageContainer").addEventListener("click", function() {
+    changeImage();
+  });
+
+  var imageIndex = 0;
+  var imageArray = ["1.webp","3.jpeg", "images.jpg"]; 
+
+  function changeImage() {
+    var image = document.getElementById("myImage");
+    imageIndex = (imageIndex + 1) % imageArray.length;
+    image.src = imageArray[imageIndex];
+  }
+</script>
+
+</body>
+</html>

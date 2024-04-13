@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissary Challenge</title>
+</head>
+<body>
+    <input id="userInput" type="text" value="Test Input">
+    <script>
+        try {
+            // Get user input
+            const userInput = document.getElementById('userInput').value;
+            //const name="Anubhva'
+            // Example: Reference Error
+            // Uncomment the next line to see a reference error
+            //console.log(nonExistentVariable);
+
+            // Example: Type Error
+            // Uncomment the next line to see a type error
+            //userInput.nonExistentMethod();
+
+            // Process user input or perform other common programming tasks
+            // ...
+
+            // If no errors occurred, log the result
+            //console.log('Result:', userInput);
+        } catch (error) {
+            // Handle errors
+            if (error instanceof ReferenceError) {
+                console.error('Reference Error:', error.message);
+            } else if (error instanceof TypeError) {
+                console.error('Type Error:', error.message);
+            } else {
+                console.error('Unexpected Error:', error.message);
+            }
+        }
+    </script>
+</body>
+</html>
